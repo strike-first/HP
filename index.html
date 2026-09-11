@@ -3,15 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>株式会社ストライク・ファースト</title
-                          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社ストライク・ファースト</title>
+  <style>
+    /* スマホ表示（画面幅768px以下）のスタイル指示 */
+    @media screen and (max-width: 768px) {
+      /* テーブル全体のブロック化 */
+      table.responsive-table, 
+      table.responsive-table tbody, 
+      tr.responsive-tr {
+        display: block !important;
+        width: 100% !important;
+        border-spacing: 0 !important;
+      }
+      
+      /* About us の各カードを縦1列に */
+      td.responsive-col {
+        display: block !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        box-sizing: border-box !important;
+        margin: 0 auto 40px auto !important;
+        padding: 0 !important;
+      }
+      .about-card-img {
+        height: 200px !important;
+      }
+      
+      /* 技術セクションのブロックを縦1列に */
+      td.responsive-td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 20px !important;
+      }
+
+      /* 代表プロフィールの写真を上・文章を下にして縦1列に */
+      .profile-table, 
+      .profile-table tbody, 
+      .profile-table tr, 
+      .profile-table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 16px !important;
+      }
+      .profile-table td img {
+        max-width: 220px !important;
+        margin: 0 auto !important;
+      }
+
+      /* お問い合わせバーをスマホで縦並びに */
+      .contact-box {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 16px !important;
+        padding: 20px 16px !important;
+      }
+    }
+  </style>
 </head>
 <body style="margin:0; padding:0; background-color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif; color:#333333; line-height:1.8;">
 
-  <!-- 1. メインビジュアル -->
   <div style="position:relative; width:100%; height:460px; background-color:#65844e; background-image:url('ストライクファースト.jpg'); background-size:cover; background-position:center; display:flex; align-items:center;">
     <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(255, 255, 255, 0.25);"></div>
-    <div style="position:relative; z-index:2; padding-left:10%; text-shadow:0 1px 3px rgba(255,255,255,0.9);">
+    <div style="position:relative; z-index:2; padding-left:10%; padding-right:10%; text-shadow:0 1px 3px rgba(255,255,255,0.9);">
       <h1 style="font-size:32px; font-weight:400; letter-spacing:0.2em; color:#1f2937; margin:0 0 10px 0;">「Sheprd」</h1>
       <p style="font-size:15px; color:#222222; margin:0; letter-spacing:0.05em;">自然言語処理を根本から解決できるグリーンＡＩ技術</p>
     </div>
@@ -19,25 +74,23 @@
 
   <div style="max-width:960px; margin:0 auto; padding:50px 20px;">
 
-    <!-- 2. 技術セクション -->
     <div style="margin-bottom:70px;">
       <h2 style="text-align:center; font-size:26px; font-weight:500; margin:0 0 12px 0;">技術</h2>
       <div style="width:75%; max-width:680px; height:8px; background-color:#92b8bc; margin:0 auto 45px auto;"></div>
       
-      <table style="width:100%; border-collapse:separate; border-spacing:20px 0;">
-        <tr>
-<!-- 技術 左ブロック -->
+      <table class="responsive-table" style="width:100%; border-collapse:separate; border-spacing:20px 0;">
+        <tr class="responsive-tr">
           <td class="responsive-td" style="width:50%; vertical-align:top; padding:0;">
             <table style="width:100%; border-collapse:collapse; border:1px solid #c2d6db; background:#ffffff;">
               <tr style="border-bottom:1px solid #c2d6db;">
-                <td style="width:30%; text-align:center; padding:15px 10px; font-size:13px; border-right:1px solid #c2d6db;">20XX.00.00</td>
+                <td style="width:30%; text-align:center; padding:15px 10px; font-size:13px; border-right:1px solid #c2d6db; white-space:nowrap;">20XX.00.00</td>
                 <td style="padding:0;">
                   <div style="background-color:#dff0f2; padding:8px 12px; font-weight:bold; font-size:14px; border-bottom:1px solid #d4e7e9;">特許 3</div>
                   <div style="padding:12px; font-size:13px; color:#444;">紹介文や説明文などを記入してください紹介文や説明文などを記入してください</div>
                 </td>
               </tr>
               <tr>
-                <td style="width:30%; text-align:center; padding:15px 10px; font-size:13px; border-right:1px solid #c2d6db;">20XX.00.00</td>
+                <td style="width:30%; text-align:center; padding:15px 10px; font-size:13px; border-right:1px solid #c2d6db; white-space:nowrap;">20XX.00.00</td>
                 <td style="padding:0;">
                   <div style="background-color:#dff0f2; padding:8px 12px; font-weight:bold; font-size:14px; border-bottom:1px solid #d4e7e9;">大阪・関西万博オンライン出展</div>
                   <div style="padding:12px; font-size:13px; color:#444;">紹介文や説明文などを記入してください紹介文や説明文などを記入してください</div>
@@ -46,18 +99,17 @@
             </table>
           </td>
 
-          <!-- 技術 右ブロック -->
           <td class="responsive-td" style="width:50%; vertical-align:top; padding:0;">
             <table style="width:100%; border-collapse:collapse; border:1px solid #c2d6db; background:#ffffff;">
               <tr style="border-bottom:1px solid #c2d6db;">
-                <td style="width:30%; text-align:center; padding:15px 10px; font-size:13px; border-right:1px solid #c2d6db;">20XX.00.00</td>
+                <td style="width:30%; text-align:center; padding:15px 10px; font-size:13px; border-right:1px solid #c2d6db; white-space:nowrap;">20XX.00.00</td>
                 <td style="padding:0;">
                   <div style="background-color:#dff0f2; padding:8px 12px; font-weight:bold; font-size:14px; border-bottom:1px solid #d4e7e9;">特許 2</div>
                   <div style="padding:12px; font-size:13px; color:#444;">紹介文や説明文などを記入してください紹介文や説明文などを記入してください</div>
                 </td>
               </tr>
               <tr>
-                <td style="width:30%; text-align:center; padding:15px 10px; font-size:13px; border-right:1px solid #c2d6db;">20XX.00.00</td>
+                <td style="width:30%; text-align:center; padding:15px 10px; font-size:13px; border-right:1px solid #c2d6db; white-space:nowrap;">20XX.00.00</td>
                 <td style="padding:0;">
                   <div style="background-color:#dff0f2; padding:8px 12px; font-weight:bold; font-size:14px; border-bottom:1px solid #d4e7e9;">特許 1</div>
                   <div style="padding:12px; font-size:13px; color:#444;">紹介文や説明文などを記入してください紹介文や説明文などを記入してください</div>
@@ -69,14 +121,12 @@
       </table>
     </div>
 
-    <!-- 3. About us セクション（PCは元の4分割表、スマホは縦1列） -->
     <div style="margin-bottom:70px;">
       <h2 style="text-align:center; font-size:26px; font-weight:500; margin:0 0 12px 0;">About us</h2>
       <div style="width:75%; max-width:680px; height:8px; background-color:#92b8bc; margin:0 auto 45px auto;"></div>
 
       <table class="responsive-table" style="width:100%; border-collapse:separate; border-spacing:15px 0; text-align:center;">
         <tr class="responsive-tr">
-          <!-- Wolf -->
           <td class="responsive-col" style="width:25%; vertical-align:top;">
             <div class="about-card-img" style="width:100%; height:160px; overflow:hidden; background:#eee; margin-bottom:12px;">
               <img src="Wolf.jpg" style="width:100%; height:100%; object-fit:cover; display:block;">
@@ -86,7 +136,6 @@
             <a href="#" style="display:inline-block; background-color:#8bb7be; color:#ffffff; text-decoration:none; padding:8px 16px; font-size:13px;">詳しくはこちら</a>
           </td>
 
-          <!-- Sheprd -->
           <td class="responsive-col" style="width:25%; vertical-align:top;">
             <div class="about-card-img" style="width:100%; height:160px; overflow:hidden; background:#eee; margin-bottom:12px;">
               <img src="シェパード画像4元画像.png" style="width:100%; height:100%; object-fit:cover; display:block;">
@@ -96,7 +145,6 @@
             <a href="#" style="display:inline-block; background-color:#8bb7be; color:#ffffff; text-decoration:none; padding:8px 16px; font-size:13px;">詳しくはこちら</a>
           </td>
 
-          <!-- Other 1 -->
           <td class="responsive-col" style="width:25%; vertical-align:top;">
             <div class="about-card-img" style="width:100%; height:160px; overflow:hidden; background:#ffffff; border:1px solid #eee; margin-bottom:12px; display:flex; align-items:center; justify-content:center;">
               <img src="WORD MARKET.PNG" style="width:100%; height:100%; object-fit:contain; display:block;">
@@ -106,7 +154,6 @@
             <a href="#" style="display:inline-block; background-color:#8bb7be; color:#ffffff; text-decoration:none; padding:8px 16px; font-size:13px;">詳しくはこちら</a>
           </td>
 
-          <!-- Other 2 -->
           <td class="responsive-col" style="width:25%; vertical-align:top;">
             <div class="about-card-img" style="width:100%; height:160px; overflow:hidden; background:#ffffff; border:1px solid #eee; margin-bottom:12px; display:flex; align-items:center; justify-content:center;">
               <img src="WORD MARKET.PNG" style="width:100%; height:100%; object-fit:contain; display:block;">
@@ -119,13 +166,11 @@
       </table>
     </div>
     
-    <!-- 4. Sheprdについて -->
     <div style="margin-bottom:70px;">
       <h2 style="text-align:center; font-size:26px; font-weight:500; margin:0 0 12px 0;">Sheprdについて</h2>
       <div style="width:75%; max-width:680px; height:8px; background-color:#92b8bc; margin:0 auto 45px auto;"></div>
 
       <div style="max-width:750px; margin:0 auto;">
-        <!-- 1. 特徴 -->
         <table style="width:100%; margin-bottom:30px; border-collapse:collapse;">
           <tr>
             <td style="width:60px; vertical-align:top; font-size:36px; font-weight:300; color:#92b8bc; line-height:1; padding-top:2px;">1.</td>
@@ -138,7 +183,6 @@
           </tr>
         </table>
 
-        <!-- 2. 開発背景 -->
         <table style="width:100%; margin-bottom:30px; border-collapse:collapse;">
           <tr>
             <td style="width:60px; vertical-align:top; font-size:36px; font-weight:300; color:#92b8bc; line-height:1; padding-top:2px;">2.</td>
@@ -156,13 +200,11 @@
       </div>
     </div>
 
-    <!-- 5. Wolfについて -->
     <div style="margin-bottom:70px;">
       <h2 style="text-align:center; font-size:26px; font-weight:500; margin:0 0 12px 0;">Wolfについて</h2>
       <div style="width:75%; max-width:680px; height:8px; background-color:#92b8bc; margin:0 auto 45px auto;"></div>
 
       <div style="max-width:750px; margin:0 auto;">
-        <!-- 1. 特徴 -->
         <table style="width:100%; margin-bottom:30px; border-collapse:collapse;">
           <tr>
             <td style="width:60px; vertical-align:top; font-size:36px; font-weight:300; color:#92b8bc; line-height:1; padding-top:2px;">1.</td>
@@ -175,7 +217,6 @@
           </tr>
         </table>
 
-        <!-- 2. 開発背景 -->
         <table style="width:100%; margin-bottom:30px; border-collapse:collapse;">
           <tr>
             <td style="width:60px; vertical-align:top; font-size:36px; font-weight:300; color:#92b8bc; line-height:1; padding-top:2px;">2.</td>
@@ -193,10 +234,9 @@
       </div>
     </div>
 
-    <!-- 6. パートナーズ -->
     <div style="margin-bottom:70px; text-align:center;">
       <h2 style="font-size:26px; font-weight:500; margin:0 0 35px 0;">パートナーズ</h2>
-      <div style="width:340px; height:240px; background-color:#ebebeb; margin:0 auto 16px auto; display:flex; align-items:center; justify-content:center;">
+      <div style="width:340px; max-width:100%; height:240px; background-color:#ebebeb; margin:0 auto 16px auto; display:flex; align-items:center; justify-content:center;">
         <svg width="64" height="64" viewBox="0 0 24 24" fill="#bbbbbb">
           <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
         </svg>
@@ -204,43 +244,42 @@
       <div style="font-size:14px; margin-bottom:18px;">ジャパンヘルプデスク</div>
       <a href="#" style="display:inline-block; background-color:#8bb7be; color:#ffffff; text-decoration:none; padding:10px 36px; font-size:14px;">ボタン</a>
     </div>
-<div style="height: 50px;"></div>
-    <!-- 7. 代表プロフィール（カード枠） -->
+
+    <div style="height: 50px;"></div>
+
     <div style="max-width:800px; margin:0 auto 70px auto; border:1px solid #c9d8dc; background:#ffffff;">
       <div style="background-color:#92b8bc; color:#ffffff; text-align:center; padding:12px; font-size:18px; font-weight:500;">代表プロフィール</div>
-      <table style="width:100%; border-collapse:collapse; padding:24px;">
+      <table class="profile-table" style="width:100%; border-collapse:collapse; padding:24px;">
         <tr>
-          <!-- 顔写真 -->
-          <td style="width:40%; padding:24px; vertical-align:top;">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" style="width:100%; display:block; border:1px solid #eee;">
+          <td style="width:40%; padding:24px; vertical-align:top; text-align:center;">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" style="width:100%; max-width:280px; display:block; border:1px solid #eee; margin:0 auto;">
           </td>
-          <!-- 経歴文 -->
           <td style="width:60%; padding:24px 24px 24px 0; vertical-align:top;">
             <div style="font-size:13px; color:#666;">Shingo Morimoto</div>
             <div style="font-size:22px; font-weight:bold; border-bottom:1px solid #dddddd; padding-bottom:6px; margin-bottom:14px;">森本 真悟</div>
             <table style="width:100%; font-size:13px; line-height:1.7; border-collapse:collapse;">
               <tr>
-                <td style="width:65px; vertical-align:top; font-weight:bold; padding-bottom:6px;">2005年</td>
+                <td style="width:65px; vertical-align:top; font-weight:bold; padding-bottom:6px; white-space:nowrap;">2005年</td>
                 <td style="padding-bottom:6px;">プログラミングやマネジメントの独学を開始。</td>
               </tr>
               <tr>
-                <td style="vertical-align:top; font-weight:bold; padding-bottom:6px;">2010年</td>
+                <td style="width:65px; vertical-align:top; font-weight:bold; padding-bottom:6px; white-space:nowrap;">2010年</td>
                 <td style="padding-bottom:6px;">愛媛大学大学院にて経済学修士を取得。独自の理論を多様な現場で実践しながらシステム開発も継続。</td>
               </tr>
               <tr>
-                <td style="vertical-align:top; font-weight:bold; padding-bottom:6px;">2017年</td>
+                <td style="width:65px; vertical-align:top; font-weight:bold; padding-bottom:6px; white-space:nowrap;">2017年</td>
                 <td style="padding-bottom:6px;">初の特許を取得。AIベンチャーに転向後、エンジェル投資家から2000万円を資金調達。</td>
               </tr>
               <tr>
-                <td style="vertical-align:top; font-weight:bold; padding-bottom:6px;">2025年</td>
+                <td style="width:65px; vertical-align:top; font-weight:bold; padding-bottom:6px; white-space:nowrap;">2025年</td>
                 <td style="padding-bottom:6px;">同分野での特許を取得。超小型グリーンXAI「Sheprd」を単独で発明。</td>
               </tr>
               <tr>
-                <td style="vertical-align:top; font-weight:bold; padding-bottom:6px;">2026年</td>
+                <td style="width:65px; vertical-align:top; font-weight:bold; padding-bottom:6px; white-space:nowrap;">2026年</td>
                 <td style="padding-bottom:6px;">大阪・関西万博にてオンライン出展。</td>
               </tr>
               <tr>
-                <td style="vertical-align:top; font-weight:bold; padding-bottom:6px;">現在</td>
+                <td style="width:65px; vertical-align:top; font-weight:bold; padding-bottom:6px; white-space:nowrap;">現在</td>
                 <td style="padding-bottom:6px;">完全成果報酬型でコストを4分の1まで削減するDXコンサルティングを提案中。</td>
               </tr>
             </table>
@@ -249,29 +288,20 @@
       </table>
     </div>
 
-   <!-- 8. ご挨拶（全文版） -->
     <div style="max-width:760px; margin:0 auto 70px auto;">
       <h2 style="text-align:center; font-size:26px; font-weight:500; margin:0 0 35px 0;">ご挨拶</h2>
       <div style="font-size:14px; line-height:2.1; color:#333;">
         <p style="margin-bottom:24px;">「生成AI」という言葉が溢れ、多くの企業がその渦に巻き込まれています。しかし、私はこの現状に強い危機感を抱いております。</p>
-        
         <p style="margin-bottom:24px;">莫大な資源と電力を必要とする現在のAI開発は、スカイツリーと同じ高さを砂山で作ろうとするようなものです。 スカイツリーは随所に知識が反映されているからこそ、限られた土地と材料であの高さを実現できています。 仮に、砂山が同じ高さに達したとしても、どれだけの砂と土地が必要になるでしょう。 また、誰もその砂山を「建築物」と呼ぶことはありません。それゆえ、私は可能な限り、生成ＡＩを「ＡＩ」と呼ばないようにしています。</p>
-        
         <p style="margin-bottom:24px;">もちろん、その利便性まで否定するつもりはございません。 しかし、人間と同等の知能に達するには、まだまだ膨大なリソース、言ってしまえば、自然環境へのさらなる負荷が必要です。 スカイツリー５本分の高さをイメージして頂ければ分かりやすいかと思います。必要な砂や土地の量は単純計算の５倍では済みません。 結果として、このアプローチは様々な面において深刻な持続可能性の問題を抱えています。</p>
-        
         <p style="margin-bottom:24px;">これに逆行する技術こそ、私が開発した「Sheprd（シェパード）」です。 極限まで濃縮された技術により、余計なリソースを一切排除し、環境負荷を最小限に抑えています。 オフラインのスマホ一台あれば動作可能ですので、膨大な電力、GPU、ビッグデータ、冷却水などは必要ありません。 日本製サービスで構成しておりますので、海外サービスにデータを送信する必要もございません。</p>
-        
         <p style="margin-bottom:0;">私たちは、目先の利便性で自然環境を破壊し、次世代に負の遺産を残すような取り組みは致しません。 人員削減のためのコストカットやAI導入にも賛同いたしません。 クライアント様が従業員の方々に何を与えたいのか。 そこに焦点を絞らせて頂きます。 例えば、それは過剰な業務、ストレス、プレッシャーからの解放かもしれません。 クリエイティブな業務への転向かもしれません。 正直な話、それらの取り組みは利益につながりにくいかもしれません。 しかし、その先に、AIによる幸せな職場づくりは待っているはずです。 そのような企業様が日本から増え始め、世界に拡がっていく未来を、私は長年、夢見てきました。 まだまだ続くこの挑戦に、ぜひご期待ください。</p>
       </div>
     </div>
 
-   <!-- 9. お問い合わせバー（グレー帯） -->
     <div style="max-width:600px; margin:0 auto 50px auto;">
-      <!-- 中央寄せの見出し -->
       <h3 style="text-align:center; font-size:18px; font-weight:bold; margin:0 0 16px 0; color:#333;">お問い合わせ</h3>
-      
-      <!-- コンパクトにしたグレー枠 -->
-      <div style="background-color:#f8f9fa; border:1px solid #eef1f2; padding:20px 30px; display:flex; align-items:center; justify-content:space-between;">
+      <div class="contact-box" style="background-color:#f8f9fa; border:1px solid #eef1f2; padding:20px 30px; display:flex; align-items:center; justify-content:space-between;">
         <div style="font-size:15px; color:#333;">
           wordmarket@outlook.jp
         </div>
@@ -280,37 +310,34 @@
         </div>
       </div>
     </div>
+
     <div style="height: 30px;"></div>
 
-    <!-- 10. 会社概要 -->
     <table style="max-width:600px; margin:0 auto; width:100%; border-collapse:collapse; font-size:14px;">
       <tr style="border-top:1px solid #e2e8ea; border-bottom:1px solid #e2e8ea;">
-        <th style="width:30%; text-align:left; padding:12px; font-weight:normal; color:#444;">会社名</th>
+        <th style="width:30%; text-align:left; padding:12px; font-weight:normal; color:#444; white-space:nowrap;">会社名</th>
         <td style="padding:12px;">株式会社ストライク・ファースト</td>
       </tr>
       <tr style="border-bottom:1px solid #e2e8ea;">
-        <th style="text-align:left; padding:12px; font-weight:normal; color:#444;">代表者</th>
+        <th style="text-align:left; padding:12px; font-weight:normal; color:#444; white-space:nowrap;">代表者</th>
         <td style="padding:12px;">森本真悟</td>
       </tr>
       <tr style="border-bottom:1px solid #e2e8ea;">
-        <th style="text-align:left; padding:12px; font-weight:normal; color:#444;">所在地</th>
+        <th style="text-align:left; padding:12px; font-weight:normal; color:#444; white-space:nowrap;">所在地</th>
         <td style="padding:12px;">〒790-0827 愛媛県松山市鉄砲町5-6</td>
       </tr>
       <tr style="border-bottom:1px solid #e2e8ea;">
-        <th style="text-align:left; padding:12px; font-weight:normal; color:#444;">設立</th>
+        <th style="text-align:left; padding:12px; font-weight:normal; color:#444; white-space:nowrap;">設立</th>
         <td style="padding:12px;">2017(平成29年)年10月4日</td>
       </tr>
     </table>
 
     <div style="height: 100px;"></div>
     
-<!-- 11. フッター画像 ＆ コピーライト -->
     <footer style="text-align:center; padding-top:20px; border-top:1px solid #f0f0f0;">
-      <!-- 中央寄せの画像（ストライクファーストロゴ） -->
       <div style="margin-bottom:20px;">
         <img src="StrikeFirst.gif" alt="Footer Logo" style="max-width:180px; height:auto; display:inline-block;">
       </div>
-      <!-- コピーライト表示 -->
       <div style="font-size:12px; color:#888888; letter-spacing:0.05em;">
         &copy; 2018 Strike First Co., Ltd.
       </div>
